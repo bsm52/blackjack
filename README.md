@@ -8,4 +8,4 @@ Program made for OOP-Fall2017 group project
 
 [Jeremy Moore](https://github.com/coldking123)
 [Charles Dillary]()
-[insertname]()
+[Brandon Meier](https://github.com/bsm52)
