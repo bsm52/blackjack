@@ -53,9 +53,20 @@ int main()
         else
             cout << "Player 2 wins!" endl;
     }
-
-
-
+    else if(p2.bust)
+    {
+        if(p1.stand)
+            cout << "Player 1 wins!" endl;
+    }
+    else
+    {
+       if(p1.total < p2.total)
+            cout << "Player 2 wins!" << endl;
+       else if(p1.total > p2.total)
+            cout <<  "Player 1 wins!" << endl;
+       else
+            cout << "Tie!" << endl;
+    }
 
     return 0;
 }

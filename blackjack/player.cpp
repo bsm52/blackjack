@@ -18,9 +18,14 @@ Player::void print(hand)
         cout << hand[i] << endl;
 }
 
-Player::void hit()
+Player::void hit(Deck deck)
 {
-    std::cout << "Hit?"
+    string input;
+    std::cout << "Hit? [y/n]" << endl;
+    cin >> input;
+    if(input == "y" && input == "Y")
+        //make draw function???
+
 }
 
 
