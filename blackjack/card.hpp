@@ -1,6 +1,7 @@
 #ifndef CARD_HPP
 #define CARD_HPP
 #include <utility>
+#include <iostream>
 
 //Ranks of a card are:
 //1-13

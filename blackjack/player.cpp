@@ -18,5 +18,10 @@ Player::void print(hand)
         cout << hand[i] << endl;
 }
 
+Player::void hit()
+{
+    std::cout << "Hit?"
+}
+
 
 #endif // PLAYER_CPP

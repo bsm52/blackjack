@@ -22,10 +22,37 @@ int main()
     if(total.p2 == 21)
         cout << "Player 2 wins" << end;
 
-
-    bool hit; //maybe add hit member function to player class
-    if(total.p1 > 21)
-        p1.bust = true;
+    bool contin = 1;
+    while(contin)
+    {
+        if(p1.total < 21 && !p1.stand)
+            p1.hit();
+        if(p2.total < 21 && !p2.stand)
+            p2.hit();
+        if(total.p1 == 21)
+        {
+            p1.stand = true;
+        }
+        if(total.p2 == 21)
+        {
+            p2.stand = true;
+        }
+        if(p1.stand && p2.stand)
+            contin = 0;
+        if(p1.bust && p2.bust)
+            contin = 0;
+        if(p1.stand && p2.bust)
+            contin = 0;
+        if(p1.bust && p2.stand)
+            contin = 0;
+    }
+    if(p1.bust)
+    {
+        if(p2.bust)
+            cout << "Tie" << endl;
+        else
+            cout << "Player 2 wins!" endl;
+    }
 
 
 

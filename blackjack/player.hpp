@@ -5,6 +5,10 @@
 class Player  //The player class which holds the "hand"
 {
 public:
+    int total();
+    void hit();
+    bool bust = false;
+    bool stand = false;
     std::deque<Card> hand; //creates a deque of cards to make the hand
     Card take();  //plays the card
     void give(Card);  //receives the car
