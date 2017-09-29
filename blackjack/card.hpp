@@ -12,7 +12,7 @@
 
 enum Rank // An enumeration type
 {
-    Ace,  // An enumerator
+    Ace = 1,
     Two,
     Three,
     Four,
@@ -24,7 +24,7 @@ enum Rank // An enumeration type
     Ten,
     Jack,
     Queen,
-    King,
+    King, // An enumerator
 };
 
 enum Suit

@@ -100,3 +100,8 @@ print(const Deck& deck)
   }
   std::cout << '\n';
 }
+
+void draw(Deck deck, Player player)
+{
+    player.hand.push_back(deck.pop_back());
+}

@@ -1,4 +1,6 @@
 #include <iostream>
+#include "deck.hpp"
+#include "player.hpp"
 
 using namespace std;
 
@@ -7,8 +9,8 @@ int main()
     Deck deck;
     deck.shuffle();
 
-    Player.p1; //add bust boolean
-    Player.p2;
+    Player p1; //add bust boolean
+    Player p2;
 
     deal(deck, p1, 2); //deals 2 cards for the player
     deal(deck, p2, 2);
@@ -22,7 +24,7 @@ int main()
     if(total.p2 == 21)
         cout << "Player 2 wins" << end;
 
-    bool contin = 1;
+
     play(p1, p2);
 
     winner(p1, p2);

@@ -30,6 +30,7 @@ Player::void hit(Deck deck)
 
 void play(Player p1, Player p2)
 {
+    bool contin = true;
      while(contin)
     {
         if(p1.total < 21 && !p1.stand)
@@ -85,8 +86,11 @@ int total()
     int total = 0;
     for(int i = 0; i < hand.size(); i++)
     {
-        total += hand[i]; // would have to overload the + operator
+         total += hand[i].rank;
+         if(total < 31 && hand[i].suit == Ace)
+            total += 10;
     }
+    return total;
 }
 
 

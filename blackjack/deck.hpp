@@ -18,6 +18,8 @@ void shuffle(Deck& d);
 // Print a deck of cards.
 void print(const Deck& d);
 
+void draw(Deck&, Player);
+
 
 
 
