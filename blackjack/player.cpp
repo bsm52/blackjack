@@ -1,6 +1,7 @@
 #ifndef PLAYER_CPP
 #define PLayer_CPP
 #include "player.hpp"
+#include <deque>
 
 Player::void give(Card card)
 {
@@ -12,10 +13,10 @@ Player::Card take()
     return hand.pop_back();
 }
 
-Player::void print(hand)
+Player::void print(Player player)
 {
-    for(int = 0; i < hand.siz(); i++)
-        cout << hand[i] << endl;
+    for(int = 0; i < player.hand.siz(); i++)
+        cout << player.hand[i] << endl;
 }
 
 Player::void hit(Deck deck)
@@ -86,8 +87,15 @@ int total()
     int total = 0;
     for(int i = 0; i < hand.size(); i++)
     {
-         total += hand[i].rank;
-         if(total < 31 && hand[i].suit == Ace)
+        if(hand[i].rank == Jack || hand[i].rank == Queen || hand[i].rank == King)
+        {
+            total += 10;
+        }
+        else
+        {
+            total += hand[i].rank;
+        }
+        if(total < 31 && hand[i].suit == Ace)
             total += 10;
     }
     return total;

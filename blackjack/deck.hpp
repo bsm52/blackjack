@@ -1,6 +1,8 @@
 #include "card.hpp"
+#include "player.hpp"
 
 #include <vector>
+
 
 // Pragmatic approach. Don't write a class if you don't
 // need to.
