@@ -15,5 +15,8 @@ public:
     void print(hand); //prints the cards in the hand
 };
 
+void play(Player, Player);
+void winner(Player, Player);
+
 
 #endif // PLAYER_HPP
