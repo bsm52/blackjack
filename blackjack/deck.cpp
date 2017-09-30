@@ -1,3 +1,5 @@
+#ifndef DECK_CPP
+#define DECK_CPP
 #include "deck.hpp"
 
 #include <iostream>
@@ -101,7 +103,22 @@ print(const Deck& deck)
   std::cout << '\n';
 }
 
+//draw function for the hit function
 void draw(Deck deck, Player player)
 {
     player.hand.push_back(deck.pop_back());
 }
+
+
+//deal function
+void deal(Deck& d, Player p, int size) //deal function to split the deck between the players
+{
+    for(int i = 0; i < size; i++)
+    {
+        p.hand.push_back(d[i]);
+        d.erase(i);
+    }
+
+}
+
+#endif // DECK_CPP

@@ -1,3 +1,5 @@
+#ifndef DECK_HPP
+#define DECK_HPP
 #include "card.hpp"
 #include "player.hpp"
 
@@ -21,6 +23,11 @@ void shuffle(Deck& d);
 void print(const Deck& d);
 
 void draw(Deck&, Player);
+
+void deal(Deck& d, Player p, int size);
+
+
+#endif // DECK_HPP
 
 
 
