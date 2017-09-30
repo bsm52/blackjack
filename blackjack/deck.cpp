@@ -5,6 +5,7 @@
 #include <iostream>
 #include <random>
 #include <algorithm>
+#include <vector>
 
 Deck
 make_standard_deck()

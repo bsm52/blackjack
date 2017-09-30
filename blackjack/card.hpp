@@ -148,16 +148,20 @@ std::ostream& operator<<(std::ostream& os, Rank r)
   //ordering
   bool operator <(Card a, Card b)
   {
+      /*
       if (a.get_suit() < b.get_suit())
         return true;
       if (b.get_suit() < a.get_suit())
         return false;
+        */
       return a.get_rank() < b.get_rank();
   }
   bool operator >(Card a, Card b)
   {
-
+      return a.get_rank() > b.get_rank();
   }
+  /*
   bool operator <=(Card a, Card b){}
   bool operator >=(Card a, Card b){}
+  */
 #endif // CARD_HPP
